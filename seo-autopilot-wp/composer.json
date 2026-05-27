@@ -1,0 +1,41 @@
+{
+  "name": "seo-autopilot-wp",
+  "version": "1.0.0",
+  "description": "AI-powered SEO automation for WordPress",
+  "author": "SEO Autopilot",
+  "license": "GPL-2.0-or-later",
+  "type": "project",
+  "require": {
+    "php": "^8.2",
+    "guzzlehttp/guzzle": "^7.8",
+    "league/oauth2-client": "^2.7"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^10.5",
+    "wp-coding-standards/wpcs": "^3.0",
+    "phpcompatibility/phpcompatibility-wp": "^2.1",
+    "yoast/phpunit-polyfills": "^2.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "SeoAutopilotWp\\": "includes/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "SeoAutopilotWp\\Tests\\": "tests/"
+    }
+  },
+  "config": {
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    },
+    "optimize-autoloader": true,
+    "sort-packages": true
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit",
+    "lint": "vendor/bin/phpcs --standard=WordPress includes/",
+    "fix": "vendor/bin/phpcbf --standard=WordPress includes/"
+  }
+}
