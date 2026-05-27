@@ -1,0 +1,30 @@
+{
+    "name": "seo-autopilot/seo-autopilot-lite",
+    "description": "Lightweight AI-powered WordPress SEO plugin",
+    "type": "wordpress-plugin",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "SEO Autopilot",
+            "email": "info@example.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "SeoAutopilotLite\\": "includes/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.0",
+        "wp-coding-standards/wpcs": "^3.0",
+        "phpcompatibility/phpcompatibility-wp": "^2.1"
+    },
+    "scripts": {
+        "test": "phpunit",
+        "lint": "phpcs --standard=WordPress",
+        "format": "phpcbf --standard=WordPress"
+    }
+}
